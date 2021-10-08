@@ -5,7 +5,7 @@ function Home({ setStep, setPoint }) {
   useEffect(() => {
     setStep(1);
     setPoint(0);
-  }, []);
+  });
   return (
     <div>
       home
