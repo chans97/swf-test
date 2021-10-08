@@ -21,9 +21,9 @@ const GlobalStyles = createGlobalStyle`
     #root {
         width:100%;
     }
-    @media(min-width: 770px){
+    @media(min-width: 480px){
         #root {
-            width:50%;
+            width:480px;
         }
     }
 `;

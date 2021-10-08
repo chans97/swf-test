@@ -18,8 +18,11 @@ function Home({ setStep, setPoint }) {
 const Homemain = styled.div`
   background-image: url(main_background.png);
   width: 100%;
-  height: 200vw;
+  height: 177.77vw;
   background-size: contain;
+  @media (min-width: 480px) {
+    height: 853px;
+  }
 `;
 
 export default Home;
