@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { BrowserRouter, Route } from "react-router-dom";
+import GlobalStyles from "./GlobalStyles";
 import Home from "./Home";
 import Problem from "./Problem";
 import Team from "./Team";
@@ -27,7 +28,8 @@ function App() {
   const teamName = teamList[point];
 
   return (
-    <div>
+    <>
+      <GlobalStyles />
       <BrowserRouter>
         <Route
           exact
@@ -47,7 +49,7 @@ function App() {
         />
         <Route exact path="/team" render={() => <Team teamName={teamName} />} />
       </BrowserRouter>
-    </div>
+    </>
   );
 }
 

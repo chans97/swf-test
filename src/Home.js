@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
+import styled from "styled-components";
 
 function Home({ setStep, setPoint }) {
   useEffect(() => {
@@ -7,11 +8,18 @@ function Home({ setStep, setPoint }) {
     setPoint(0);
   });
   return (
-    <div>
+    <Homemain>
       home
       <Link to="/problem">나와 어울리는 댄스 크루 찾으러 가기</Link>
-    </div>
+    </Homemain>
   );
 }
+
+const Homemain = styled.div`
+  background-image: url(main_background.png);
+  width: 100%;
+  height: 200vw;
+  background-size: contain;
+`;
 
 export default Home;
