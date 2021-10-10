@@ -15,9 +15,17 @@ function Home({ setStep, setPoint }) {
           <BtnSpan>댄스 크루 찾으러 가기</BtnSpan>
         </Btn>
       </Link>
-      <CountSpan>
-        <BoldNumber>2021</BoldNumber>명의 댄서들이 참여했습니다.
-      </CountSpan>
+
+      <a href="https://hits.seeyoufarm.com">
+        <a href="https://www.webfreecounter.com/" target="_blank">
+          <img
+            src="https://www.cutercounter.com/hits.php?id=hexadkoa&nd=6&style=71"
+            border="0"
+            alt="best free website hit counter"
+          />
+        </a>
+      </a>
+      <CountSpan>명의 댄서들이 참여했습니다.</CountSpan>
       <Footer>
         <span>©Chan&Blanky</span>
         <span>Develop by | chansoo920@gmail.com</span>
@@ -44,6 +52,7 @@ const Btn = styled.div`
   width: 240px;
   height: 70px;
   margin-top: 390px;
+  margin-bottom: 40px;
   border: 1px solid #a3b0ff;
   box-sizing: border-box;
   border-radius: 35px;
@@ -64,7 +73,7 @@ const BtnSpan = styled.span`
 
 const CountSpan = styled.span`
   font-weight: 300;
-  margin-top: 20px;
+  margin-top: 8px;
   font-style: normal;
   font-size: 16px;
   display: flex;
