@@ -16,15 +16,11 @@ function Home({ setStep, setPoint }) {
         </Btn>
       </Link>
 
-      <a href="https://hits.seeyoufarm.com">
-        <a href="https://www.webfreecounter.com/" target="_blank">
-          <img
-            src="https://www.cutercounter.com/hits.php?id=hexadkoa&nd=6&style=71"
-            border="0"
-            alt="best free website hit counter"
-          />
-        </a>
-      </a>
+      <img
+        src="https://www.cutercounter.com/hits.php?id=hexadkoa&nd=6&style=71"
+        border="0"
+        alt="best free website hit counter"
+      />
       <CountSpan>명의 댄서들이 참여했습니다.</CountSpan>
       <Footer>
         <span>©Chan&Blanky</span>
