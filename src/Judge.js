@@ -9,10 +9,12 @@ function Judge() {
   };
   return (
     <Problemmain>
-      <TitleSpan>현재 Judge : {}</TitleSpan>
+      <TitleSpan>파이트 저지의 선택이 도착했습니다.{}</TitleSpan>
 
-      <SubSpan>현재 Judge : {}</SubSpan>
-      <CardImg src="card_JUDGE.png" onClick={goResult} />
+      <SubSpan>카드를 스크롤해서 확인하세요.</SubSpan>
+      <Carddiv onMouseLeave={goResult}>
+        <CardImg src="card_JUDGE.png" />
+      </Carddiv>
     </Problemmain>
   );
 }
@@ -36,21 +38,23 @@ const SubSpan = styled.span`
   line-height: 29px;
   color: #ffffff;
 `;
-const roll2 = keyframes`
-  0% {
-    opacity: 1;
-    left: 50%;
-  }
-  100% {
-    opacity: 0;
-    left: 50%;
-  }
+
+const rotateAnimation = keyframes`
+    0%{transform: rotateY(0)}
+    100%{transform: rotateY(360deg)}
+  
+  `;
+const Carddiv = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 const CardImg = styled.img`
   margin-top: 20px;
   width: 80%;
   &:hover {
-    animation: ${roll2} 1s;
+    animation: ${rotateAnimation} 2s ease infinite;
   }
 `;
 
