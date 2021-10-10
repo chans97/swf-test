@@ -55,7 +55,7 @@ function Team({ teamName }) {
             <span>발랄 코믹 매력적 하이틴</span>
           </CrewWords>
           <ShareText>▼눌러서 공유하기</ShareText>
-          <a>
+          <ImgDiv>
             <img
               onClick={shareFacebook}
               src="icon-facebook.png"
@@ -67,7 +67,7 @@ function Team({ teamName }) {
               src="icon-twitter.png"
               alt="shareTwitter"
             />
-          </a>
+          </ImgDiv>
           <ShareText onClick={goHome}>다시 테스트 하기</ShareText>
         </Teammain>
       );
@@ -158,5 +158,13 @@ const ShareText = styled.span`
   font-size: 10px;
   line-height: 14px;
   color: #a3b0ff;
+`;
+
+const ImgDiv = styled.div`
+  width: 150px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 `;
 export default Team;
