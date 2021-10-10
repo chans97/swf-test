@@ -54,7 +54,7 @@ function Team({ teamName }) {
             <span>섹시 호탕 센스 분위기 메이커</span>
             <span>발랄 코믹 매력적 하이틴</span>
           </CrewWords>
-          <ShareText>▼눌러서 공유하기</ShareText>
+          <ShareText>▼ 눌러서 공유하기</ShareText>
           <ImgDiv>
             <img
               onClick={shareFacebook}
@@ -73,7 +73,7 @@ function Team({ teamName }) {
               alt="shareTwitter"
             />
           </ImgDiv>
-          <ShareText onClick={goHome}>다시 테스트 하기</ShareText>
+          <ShareText onClick={goHome}>테스트 다시하기</ShareText>
         </Teammain>
       );
     case "HOOK":

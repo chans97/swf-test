@@ -21,7 +21,7 @@ function Judge({ teamName }) {
       {afterClick ? (
         <>
           <TitleSpan2>당신의 크루는</TitleSpan2>
-          <SubSpan2>카드를 클릭해서 확인하세요.</SubSpan2>{" "}
+          <SubSpan2>카드를 클릭해서 크루에 합류하세요.</SubSpan2>{" "}
         </>
       ) : (
         <>
