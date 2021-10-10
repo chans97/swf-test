@@ -21,9 +21,9 @@ function App() {
     "YGX",
     "WANT",
     "WAYB",
-    "CocaNButter",
+    "COCANBUTTER",
     "PROWDMON",
-    "HolyBang",
+    "HOLYBANG",
     "HOOK",
   ];
   const teamName = teamList[point];
@@ -48,7 +48,11 @@ function App() {
             />
           )}
         />
-        <Route exact path="/judge" component={Judge} />
+        <Route
+          exact
+          path="/judge"
+          render={() => <Judge teamName={teamName} />}
+        />
         <Route exact path="/team" render={() => <Team teamName={teamName} />} />
       </BrowserRouter>
     </>
