@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import { useHistory } from "react-router";
 import styled, { keyframes } from "styled-components";
 
@@ -15,7 +15,6 @@ function Judge({ teamName }) {
       afterClickSetstate(1);
     }, 3000);
   };
-  const cardList = ["card_PROWDMON.png"];
 
   return (
     <Jugemain>

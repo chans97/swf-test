@@ -1,7 +1,7 @@
 import React from "react";
 import { useHistory } from "react-router";
 
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 function Team({ teamName }) {
   let history = useHistory();
   const goHome = () => {
@@ -28,6 +28,7 @@ function Team({ teamName }) {
           </CrewWords>
           <ShareText>▼눌러서 공유하기</ShareText>
           <div className="addthis_inline_share_toolbox"></div>
+          <ShareText onClick={goHome}>다시 테스트 하기</ShareText>
         </Teammain>
       );
     case "HOOK":
@@ -101,6 +102,7 @@ const CrewMention = styled.div`
 `;
 const CrewWords = styled.div`
   margin-top: 12px;
+  margin-bottom: 40px;
   font-weight: 700;
   font-size: 20px;
   line-height: 29px;
@@ -110,7 +112,8 @@ const CrewWords = styled.div`
   align-items: center;
 `;
 const ShareText = styled.span`
-  margin-top: 40px;
+  margin-top: 10px;
+  margin-bottom: 12px;
   font-weight: 300;
   font-size: 10px;
   line-height: 14px;
