@@ -3,6 +3,7 @@ import reset from "styled-reset";
 
 const GlobalStyles = createGlobalStyle` 
     ${reset}
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@700&display=swap');
     a{
         text-decoration: none;
         color: inherit;
@@ -11,7 +12,7 @@ const GlobalStyles = createGlobalStyle`
         box-sizing: border-box;
     }
     body {
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-family: 'Noto Sans KR', sans-serif;
         font-size: 14px;
         background-color: #1F1D1E;
         color: white;
@@ -21,9 +22,9 @@ const GlobalStyles = createGlobalStyle`
     #root {
         width:100%;
     }
-    @media(min-width: 480px){
+    @media(min-width: 400px){
         #root {
-            width:480px;
+            width:400px;
         }
     }
 `;
