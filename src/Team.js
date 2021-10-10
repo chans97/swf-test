@@ -21,7 +21,7 @@ function Team({ teamName }) {
   };
   const shareKakao = () => {
     Kakao.Link.createDefaultButton({
-      container: "#btnKakao", // 카카오공유버튼ID
+      container: "#kakaoBtn", // 카카오공유버튼ID
       objectType: "feed",
       content: {
         title: "스우파 테스트", // 보여질 제목
@@ -61,7 +61,12 @@ function Team({ teamName }) {
               src="icon-facebook.png"
               alt="shareFacebook"
             />
-            <img onClick={shareKakao} src="icon-kakao.png" alt="shareKakao" />
+            <img
+              id="kakaoBtn"
+              onClick={shareKakao}
+              src="icon-kakao.png"
+              alt="shareKakao"
+            />
             <img
               onClick={shareTwitter}
               src="icon-twitter.png"
