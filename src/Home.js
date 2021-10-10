@@ -14,14 +14,14 @@ function Home({ setStep, setPoint }) {
           <BtnSpan>나와 어울리는</BtnSpan>
           <BtnSpan>댄스 크루 찾으러 가기</BtnSpan>
         </Btn>
-        <CountSpan>
-          <BoldNumber>2021</BoldNumber>명의 댄서들이 참여했습니다.
-        </CountSpan>
       </Link>
+      <CountSpan>
+        <BoldNumber>2021</BoldNumber>명의 댄서들이 참여했습니다.
+      </CountSpan>
       <Footer>
         <span>©Chan&Blanky</span>
-        <span>Develop by | dpdpdpfl@google.com</span>
-        <span>Design by |Dskdksk@google.com</span>
+        <span>Develop by | chansoo920@gmail.com</span>
+        <span>Design by | sbleeyouk@gmail.com</span>
       </Footer>
     </Homemain>
   );
@@ -36,7 +36,8 @@ const Homemain = styled.div`
     height: 711px;
   }
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 `;
 
 const Btn = styled.div`
@@ -55,13 +56,14 @@ const Btn = styled.div`
 `;
 
 const BtnSpan = styled.span`
-  font-weight: bold;
+  font-weight: 700;
   font-size: 20px;
   line-height: 29px;
   color: #a3b0ff;
 `;
 
 const CountSpan = styled.span`
+  font-weight: 300;
   margin-top: 20px;
   font-style: normal;
   font-size: 16px;
@@ -82,7 +84,7 @@ const Footer = styled.div`
   top: 95%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-weight: 300;
+  font-weight: 100;
   font-size: 8px;
   line-height: 15px;
   display: flex;

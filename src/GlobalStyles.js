@@ -3,7 +3,6 @@ import reset from "styled-reset";
 
 const GlobalStyles = createGlobalStyle` 
     ${reset}
-    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@700&display=swap');
     a{
         text-decoration: none;
         color: inherit;
@@ -18,6 +17,7 @@ const GlobalStyles = createGlobalStyle`
         color: white;
         display : flex;
         justify-content: center;
+        flex-direction: row;
     }
     #root {
         width:100%;

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { BrowserRouter, Route } from "react-router-dom";
 import GlobalStyles from "./GlobalStyles";
 import Home from "./Home";
+import Judge from "./Judge";
 import Problem from "./Problem";
 import Team from "./Team";
 
@@ -9,10 +10,10 @@ function App() {
   const [step, setStep] = useState(1);
   const [point, setPoint] = useState(0);
   const firstAnswer = () => {
-    setPoint((prepoint) => prepoint + 1);
     setStep((preStep) => preStep + 1);
   };
   const secondAnswer = () => {
+    setPoint((prepoint) => prepoint + 1);
     setStep((preStep) => preStep + 1);
   };
   const teamList = [
@@ -47,6 +48,7 @@ function App() {
             />
           )}
         />
+        <Route exact path="/judge" component={Judge} />
         <Route exact path="/team" render={() => <Team teamName={teamName} />} />
       </BrowserRouter>
     </>
