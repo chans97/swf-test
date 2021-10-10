@@ -79,10 +79,10 @@ const CountSpan = styled.span`
   color: #a3b0ff;
 `;
 
-const BoldNumber = styled.span`
-  font-weight: bold;
-  margin-right: 4px;
-`;
+// const BoldNumber = styled.span`
+//   font-weight: bold;
+//   margin-right: 4px;
+// `;
 
 const Footer = styled.div`
   position: absolute;
