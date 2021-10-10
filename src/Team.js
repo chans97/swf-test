@@ -2,11 +2,39 @@ import React from "react";
 import { useHistory } from "react-router";
 
 import styled from "styled-components";
+const { Kakao } = window;
+
 function Team({ teamName }) {
   let history = useHistory();
   const goHome = () => {
     history.push("/");
   };
+  const sendUrl = "https://swftest.ga"; // 전달할 URL
+  const shareFacebook = () => {
+    window.open("http://www.facebook.com/sharer/sharer.php?u=" + sendUrl);
+  };
+  const shareTwitter = () => {
+    var sendText = "스우파 테스트"; // 전달할 텍스트
+    window.open(
+      "https://twitter.com/intent/tweet?text=" + sendText + "&url=" + sendUrl
+    );
+  };
+  const shareKakao = () => {
+    Kakao.Link.createDefaultButton({
+      container: "#btnKakao", // 카카오공유버튼ID
+      objectType: "feed",
+      content: {
+        title: "스우파 테스트", // 보여질 제목
+        description: "나는 어떤 댄스 크루일까?", // 보여질 설명
+        imageUrl: "swftest.ga", // 콘텐츠 URL
+        link: {
+          mobileWebUrl: "swftest.ga",
+          webUrl: "swftest.ga",
+        },
+      },
+    });
+  };
+
   switch (teamName) {
     case "LACHICA":
       return (
@@ -27,7 +55,19 @@ function Team({ teamName }) {
             <span>발랄 코믹 매력적 하이틴</span>
           </CrewWords>
           <ShareText>▼눌러서 공유하기</ShareText>
-          <div className="addthis_inline_share_toolbox"></div>
+          <a>
+            <img
+              onClick={shareFacebook}
+              src="icon-facebook.png"
+              alt="shareFacebook"
+            />
+            <img onClick={shareKakao} src="icon-kakao.png" alt="shareKakao" />
+            <img
+              onClick={shareTwitter}
+              src="icon-twitter.png"
+              alt="shareTwitter"
+            />
+          </a>
           <ShareText onClick={goHome}>다시 테스트 하기</ShareText>
         </Teammain>
       );

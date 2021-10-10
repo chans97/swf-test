@@ -261,7 +261,7 @@ const LogoRoll = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-  animation: ${roll2} 25s infinite linear;
+  animation: ${roll2} 35s infinite linear;
   overflow: hidden;
 `;
 const LogoRoll2 = styled.div`
@@ -274,7 +274,7 @@ const LogoRoll2 = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-  animation: ${roll1} 25s infinite linear;
+  animation: ${roll1} 35s infinite linear;
   overflow: hidden;
 `;
 
