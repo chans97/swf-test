@@ -84,6 +84,7 @@ const rotateAnimation = keyframes`
     80%{transform: rotateY(720deg)}
     100%{transform: rotateY(1440deg)}
   `;
+
 const Carddiv = styled.div`
   margin-top: 20px;
   width: 100%;

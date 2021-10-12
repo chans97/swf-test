@@ -9,7 +9,7 @@ function Team({ teamName }) {
   const goHome = () => {
     history.push("/");
   };
-  const sendUrl = "https://swftest.ga"; // 전달할 URL
+  const sendUrl = "https://swftest.netlify.app"; // 전달할 URL
   const shareFacebook = () => {
     window.open("http://www.facebook.com/sharer/sharer.php?u=" + sendUrl);
   };
@@ -26,10 +26,10 @@ function Team({ teamName }) {
       content: {
         title: "스우파 테스트", // 보여질 제목
         description: "나는 어떤 댄스 크루일까?", // 보여질 설명
-        imageUrl: "swftest.ga", // 콘텐츠 URL
+        imageUrl: "swftest.netlify.app", // 콘텐츠 URL
         link: {
-          mobileWebUrl: "swftest.ga",
-          webUrl: "swftest.ga",
+          mobileWebUrl: "swftest.netlify.app",
+          webUrl: "swftest.netlify.app",
         },
       },
     });

@@ -1,4 +1,4 @@
 
 User-agent: *
 Disallow:
-Sitemap: http://swftest.ga/sitemap.xml
+Sitemap: http://swftest.netlify.app/sitemap.xml
