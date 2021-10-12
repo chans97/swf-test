@@ -15,12 +15,12 @@ function Home({ setStep, setPoint }) {
           <BtnSpan>댄스 크루 찾으러 가기</BtnSpan>
         </Btn>
       </Link>
-      {/* <img
-        src="https://www.cutercounter.com/hits.php?id=hxadakn&nd=6&style=71"
+      <img
+        src="https://hitwebcounter.com/counter/counter.php?page=7881174&style=0025&nbdigits=7&type=page&initCount=0"
         border="0"
-        alt="best free website hit counter"
+        alt="2021명의 댄서"
       />
-      <CountSpan>명의 댄서들이 참여했습니다.</CountSpan> */}
+      <CountSpan>명의 댄서들이 참여했습니다.</CountSpan>
       <Footer>
         <span>©Chan&Blanky</span>
         <span>Develop by | chansoo920@gmail.com</span>
@@ -66,17 +66,17 @@ const BtnSpan = styled.span`
   color: #a3b0ff;
 `;
 
-// const CountSpan = styled.span`
-//   font-weight: 300;
-//   margin-top: 8px;
-//   font-style: normal;
-//   font-size: 16px;
-//   display: flex;
-//   align-items: center;
-//   text-align: center;
+const CountSpan = styled.span`
+  font-weight: 300;
+  margin-top: 8px;
+  font-style: normal;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  text-align: center;
 
-//   color: #a3b0ff;
-// `;
+  color: #a3b0ff;
+`;
 
 // const BoldNumber = styled.span`
 //   font-weight: bold;
