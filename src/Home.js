@@ -15,12 +15,9 @@ function Home({ setStep, setPoint }) {
           <BtnSpan>댄스 크루 찾으러 가기</BtnSpan>
         </Btn>
       </Link>
+      <img 
+        src="https://www.cutercounter.com/hits.php?id=hvxadaka&nd=6&style=71" border="0" alt="website counter">
 
-      <img
-        src="https://www.cutercounter.com/hits.php?id=hxadakd&nd=6&style=71"
-        border="0"
-        alt="best free website hit counter"
-      />
       <CountSpan>명의 댄서들이 참여했습니다.</CountSpan>
       <Footer>
         <span>©Chan&Blanky</span>
