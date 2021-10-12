@@ -32,6 +32,15 @@ function Team({ teamName }) {
           webUrl: "https://swftest.netlify.app",
         },
       },
+      buttons: [
+        {
+          title: "나도 테스트 하러 가기!",
+          link: {
+            mobileWebUrl: "https://swftest.netlify.app",
+            webUrl: "https://swftest.netlify.app",
+          },
+        },
+      ],
     });
   };
 
