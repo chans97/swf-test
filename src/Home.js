@@ -16,9 +16,9 @@ function Home({ setStep, setPoint }) {
         </Btn>
       </Link>
       <img
-        src="https://www.cutercounter.com/hits.php?id=hvxadaka&nd=6&style=71"
+        src="https://www.cutercounter.com/hits.php?id=hxadakn&nd=6&style=71"
         border="0"
-        alt="website counter"
+        alt="best free website hit counter"
       />
 
       <CountSpan>명의 댄서들이 참여했습니다.</CountSpan>
