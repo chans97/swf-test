@@ -48,7 +48,7 @@ const Btn = styled.div`
   width: 240px;
   height: 70px;
   margin-top: 390px;
-  margin-bottom: 40px;
+  margin-bottom: 16px;
   border: 1px solid #a3b0ff;
   box-sizing: border-box;
   border-radius: 35px;
@@ -97,6 +97,13 @@ const Footer = styled.div`
   align-items: center;
   text-align: center;
   color: #ffffff;
+  @media (max-height: 600px) {
+    margin-top: 30px;
+    position: relative;
+    top: 0%;
+    left: 0%;
+    transform: translate(0%, 0%);
+  }
 `;
 
 export default Home;
