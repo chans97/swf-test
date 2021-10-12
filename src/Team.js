@@ -26,10 +26,10 @@ function Team({ teamName }) {
       content: {
         title: "스우파 테스트", // 보여질 제목
         description: "나는 어떤 댄스 크루일까?", // 보여질 설명
-        imageUrl: "swftest.netlify.app", // 콘텐츠 URL
+        imageUrl: "https://swftest.netlify.app/firstimg.png", // 콘텐츠 URL
         link: {
-          mobileWebUrl: "swftest.netlify.app",
-          webUrl: "swftest.netlify.app",
+          mobileWebUrl: "https://swftest.netlify.app",
+          webUrl: "https://swftest.netlify.app",
         },
       },
     });
