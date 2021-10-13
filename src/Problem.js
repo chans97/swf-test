@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useHistory } from "react-router";
 
 import styled, { keyframes } from "styled-components";
@@ -11,6 +11,22 @@ function Problem({ step, firstAnswer, secondAnswer }) {
   if (step >= 8) {
     endFlag = 1;
   }
+  useEffect(() => {
+    let ins = document.createElement("ins");
+    let scr = document.createElement("script");
+
+    ins.className = "kakao_ad_area";
+    ins.style = "display:none; width:100%;";
+    scr.async = "true";
+    scr.type = "text/javascript";
+    scr.src = "//t1.daumcdn.net/kas/static/ba.min.js";
+    ins.setAttribute("data-ad-width", "320");
+    ins.setAttribute("data-ad-height", "100");
+    ins.setAttribute("data-ad-unit", "DAN-ZqR4Npz8VrhNg5g9");
+
+    document.querySelector(".adfit").appendChild(ins);
+    document.querySelector(".adfit").appendChild(scr);
+  });
   const roundTitleList = [
     "첫 등장",
     "약자 지목 배틀 1",
@@ -102,6 +118,7 @@ function Problem({ step, firstAnswer, secondAnswer }) {
         <Logoimg src="logo_WAYB.png" alt="" srcset="" />
         <Logoimg src="logo_YGX.png" alt="" srcset="" />
       </LogoRoll2>
+      <Addiv className="adfit" />
     </Problemmain>
   );
 }
@@ -158,7 +175,7 @@ const Dot = styled.div`
 `;
 
 const Qdiv = styled.div`
-  margin-top: 140px;
+  margin-top: 90px;
   margin-bottom: 20px;
   font-weight: 700;
   font-size: 20px;
@@ -258,7 +275,7 @@ const roll2 = keyframes`
 `;
 const LogoRoll = styled.div`
   position: fixed;
-  top: 95%;
+  top: 84%;
   left: 50%;
   width: 100%;
   transform: translate(-50%, -50%);
@@ -271,7 +288,7 @@ const LogoRoll = styled.div`
 `;
 const LogoRoll2 = styled.div`
   position: fixed;
-  top: 95%;
+  top: 84%;
   left: 50%;
   width: 100%;
   transform: translate(-50%, -50%);
@@ -287,4 +304,14 @@ const Logoimg = styled.img`
   width: 70px;
 `;
 
+const Addiv = styled.div`
+  position: fixed;
+  top: 88%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, 0%);
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+`;
 export default Problem;

@@ -21,6 +21,7 @@ function Home({ setStep, setPoint }) {
         alt="2021명의 댄서"
       />
       <CountSpan>명의 댄서들이 참여했습니다.</CountSpan>
+
       <Footer>
         <span>©Chan&Blanky</span>
         <span>Develop by | chansoo920@gmail.com</span>

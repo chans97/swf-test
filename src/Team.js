@@ -1,10 +1,26 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useHistory } from "react-router";
 
 import styled from "styled-components";
 const { Kakao } = window;
 
 function Team({ teamName }) {
+  useEffect(() => {
+    let ins = document.createElement("ins");
+    let scr = document.createElement("script");
+
+    ins.className = "kakao_ad_area";
+    ins.style = "display:none; width:100%;";
+    scr.async = "true";
+    scr.type = "text/javascript";
+    scr.src = "//t1.daumcdn.net/kas/static/ba.min.js";
+    ins.setAttribute("data-ad-width", "320");
+    ins.setAttribute("data-ad-height", "100");
+    ins.setAttribute("data-ad-unit", "DAN-ZqR4Npz8VrhNg5g9");
+
+    document.querySelector(".adfit").appendChild(ins);
+    document.querySelector(".adfit").appendChild(scr);
+  });
   let history = useHistory();
   const goHome = () => {
     history.push("/");
@@ -86,6 +102,8 @@ function Team({ teamName }) {
             />
           </ImgDiv>
           <ShareText onClick={goHome}>테스트 다시하기</ShareText>
+
+          <Addiv className="adfit" />
         </Teammain>
       );
     case "YGX":
@@ -129,6 +147,8 @@ function Team({ teamName }) {
             />
           </ImgDiv>
           <ShareText onClick={goHome}>테스트 다시하기</ShareText>
+
+          <Addiv className="adfit" />
         </Teammain>
       );
     case "WANT":
@@ -172,6 +192,8 @@ function Team({ teamName }) {
             />
           </ImgDiv>
           <ShareText onClick={goHome}>테스트 다시하기</ShareText>
+
+          <Addiv className="adfit" />
         </Teammain>
       );
 
@@ -216,6 +238,8 @@ function Team({ teamName }) {
             />
           </ImgDiv>
           <ShareText onClick={goHome}>테스트 다시하기</ShareText>
+
+          <Addiv className="adfit" />
         </Teammain>
       );
     case "COCANBUTTER":
@@ -259,6 +283,8 @@ function Team({ teamName }) {
             />
           </ImgDiv>
           <ShareText onClick={goHome}>테스트 다시하기</ShareText>
+
+          <Addiv className="adfit" />
         </Teammain>
       );
     case "PROWDMON":
@@ -305,6 +331,8 @@ function Team({ teamName }) {
             />
           </ImgDiv>
           <ShareText onClick={goHome}>테스트 다시하기</ShareText>
+
+          <Addiv className="adfit" />
         </Teammain>
       );
 
@@ -353,6 +381,8 @@ function Team({ teamName }) {
             />
           </ImgDiv>
           <ShareText onClick={goHome}>테스트 다시하기</ShareText>
+
+          <Addiv className="adfit" />
         </Teammain>
       );
 
@@ -397,12 +427,16 @@ function Team({ teamName }) {
             />
           </ImgDiv>
           <ShareText onClick={goHome}>테스트 다시하기</ShareText>
+
+          <Addiv className="adfit" />
         </Teammain>
       );
     default:
       return (
         <Teammain>
           <TitleSpan>오류입니다.</TitleSpan>
+
+          <Addiv className="adfit" />
         </Teammain>
       );
   }
@@ -488,5 +522,11 @@ const ImgDiv = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+`;
+const Addiv = styled.div`
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 `;
 export default Team;
