@@ -17,14 +17,14 @@ function App() {
     setStep((preStep) => preStep + 1);
   };
   const teamList = [
-    "LACHICA",
-    "YGX",
     "WANT",
     "WAYB",
-    "COCANBUTTER",
-    "PROWDMON",
-    "HOLYBANG",
+    "LACHICA",
     "HOOK",
+    "YGX",
+    "COCANBUTTER",
+    "HOLYBANG",
+    "PROWDMON",
   ];
   const teamName = teamList[point];
 
