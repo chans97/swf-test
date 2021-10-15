@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { BrowserRouter, Route } from "react-router-dom";
 import GlobalStyles from "./GlobalStyles";
 import Home from "./Home";
@@ -7,6 +7,10 @@ import Problem from "./Problem";
 import Team from "./Team";
 
 function App() {
+  useEffect(() => {
+    const image = new Image();
+    image.src = "card_JUDGE.png";
+  }, []);
   const [step, setStep] = useState(1);
   const [point, setPoint] = useState(0);
   const firstAnswer = () => {

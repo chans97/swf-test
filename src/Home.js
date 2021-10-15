@@ -56,8 +56,6 @@ const Btn = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  @media (min-width: 480px) {
-  }
 `;
 
 const BtnSpan = styled.span`

@@ -1,8 +1,15 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router";
 import styled, { keyframes } from "styled-components";
 
 function Judge({ teamName }) {
+  useEffect(() => {
+    const image = new Image();
+    const image2 = new Image();
+    image.src = "card_" + teamName + ".png";
+
+    image2.src = "team_" + teamName + ".png";
+  });
   let [firstClick, firstClickSetstate] = useState(0);
   let [afterClick, afterClickSetstate] = useState(0);
   let history = useHistory();
