@@ -33,7 +33,7 @@ function App() {
       const image = new Image();
       image.src = "logo_" + teamName + ".png";
     });
-  }, []);
+  });
   const teamName = teamList[point];
 
   return (
