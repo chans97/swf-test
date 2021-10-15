@@ -59,6 +59,16 @@ function Team({ teamName }) {
       ],
     });
   };
+  const copyToClipboard = () => {
+    var url = "";
+    var textarea = document.createElement("textarea");
+    document.body.appendChild(textarea);
+    url = "https://swftest.netlify.app";
+    textarea.value = url;
+    textarea.select();
+    document.body.removeChild(textarea);
+    alert("URL이 복사되었습니다.");
+  };
 
   switch (teamName) {
     case "LACHICA":
@@ -190,6 +200,9 @@ function Team({ teamName }) {
               src="icon-twitter.png"
               alt="shareTwitter"
             />
+            <Linki onClick={copyToClipboard}>
+              <i className="fas fa-link"></i>
+            </Linki>
           </ImgDiv>
           <ShareText onClick={goHome}>테스트 다시하기</ShareText>
 
@@ -517,7 +530,7 @@ const ShareText = styled.span`
 `;
 
 const ImgDiv = styled.div`
-  width: 150px;
+  width: 200px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -528,5 +541,17 @@ const Addiv = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: center;
+`;
+
+const Linki = styled.div`
+  width: 40px;
+  background-color: chocolate;
+  height: 40px;
+  border-radius: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 17px;
+  cursor: pointer;
 `;
 export default Team;

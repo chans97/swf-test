@@ -102,15 +102,18 @@ const Carddiv = styled.div`
 const Cardfirst = styled.img`
   width: 80%;
   animation: ${Opacity} 3s linear;
+  cursor: pointer;
 `;
 const CardImg = styled.img`
   width: 80%;
   animation: ${rotateAnimation} 3s linear;
   animation-iteration-count: 1;
+  cursor: pointer;
 `;
 const Cardcrew = styled.img`
   width: 80%;
   animation: ${Opacity} 7s ease-in-out;
+  cursor: pointer;
 `;
 
 export default Judge;
