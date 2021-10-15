@@ -66,8 +66,9 @@ function Team({ teamName }) {
     url = "https://swftest.netlify.app";
     textarea.value = url;
     textarea.select();
+    document.execCommand("copy");
     document.body.removeChild(textarea);
-    alert("URL이 복사되었습니다.");
+    alert("링크가 복사되었습니다.");
   };
 
   switch (teamName) {
@@ -110,6 +111,9 @@ function Team({ teamName }) {
               src="icon-twitter.png"
               alt="shareTwitter"
             />
+            <Linki onClick={copyToClipboard}>
+              <i className="fas fa-link"></i>
+            </Linki>
           </ImgDiv>
           <ShareText onClick={goHome}>테스트 다시하기</ShareText>
 
@@ -155,6 +159,9 @@ function Team({ teamName }) {
               src="icon-twitter.png"
               alt="shareTwitter"
             />
+            <Linki onClick={copyToClipboard}>
+              <i className="fas fa-link"></i>
+            </Linki>
           </ImgDiv>
           <ShareText onClick={goHome}>테스트 다시하기</ShareText>
 
@@ -249,6 +256,9 @@ function Team({ teamName }) {
               src="icon-twitter.png"
               alt="shareTwitter"
             />
+            <Linki onClick={copyToClipboard}>
+              <i className="fas fa-link"></i>
+            </Linki>
           </ImgDiv>
           <ShareText onClick={goHome}>테스트 다시하기</ShareText>
 
@@ -294,6 +304,9 @@ function Team({ teamName }) {
               src="icon-twitter.png"
               alt="shareTwitter"
             />
+            <Linki onClick={copyToClipboard}>
+              <i className="fas fa-link"></i>
+            </Linki>
           </ImgDiv>
           <ShareText onClick={goHome}>테스트 다시하기</ShareText>
 
@@ -342,6 +355,9 @@ function Team({ teamName }) {
               src="icon-twitter.png"
               alt="shareTwitter"
             />
+            <Linki onClick={copyToClipboard}>
+              <i className="fas fa-link"></i>
+            </Linki>
           </ImgDiv>
           <ShareText onClick={goHome}>테스트 다시하기</ShareText>
 
@@ -392,6 +408,9 @@ function Team({ teamName }) {
               src="icon-twitter.png"
               alt="shareTwitter"
             />
+            <Linki onClick={copyToClipboard}>
+              <i className="fas fa-link"></i>
+            </Linki>
           </ImgDiv>
           <ShareText onClick={goHome}>테스트 다시하기</ShareText>
 
@@ -438,6 +457,9 @@ function Team({ teamName }) {
               src="icon-twitter.png"
               alt="shareTwitter"
             />
+            <Linki onClick={copyToClipboard}>
+              <i className="fas fa-link"></i>
+            </Linki>
           </ImgDiv>
           <ShareText onClick={goHome}>테스트 다시하기</ShareText>
 
