@@ -7,10 +7,6 @@ import Problem from "./Problem";
 import Team from "./Team";
 
 function App() {
-  useEffect(() => {
-    const image = new Image();
-    image.src = "card_JUDGE.png";
-  }, []);
   const [step, setStep] = useState(1);
   const [point, setPoint] = useState(0);
   const firstAnswer = () => {
@@ -30,6 +26,14 @@ function App() {
     "HOLYBANG",
     "PROWDMON",
   ];
+  useEffect(() => {
+    const image = new Image();
+    image.src = "card_JUDGE.png";
+    teamList.forEach((teamName) => {
+      const image = new Image();
+      image.src = "logo_" + teamName + ".png";
+    });
+  }, []);
   const teamName = teamList[point];
 
   return (
