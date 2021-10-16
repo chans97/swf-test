@@ -322,7 +322,7 @@ const Logoimg = styled.img`
   width: 70px;
 `;
 const AddivBtn = styled.div`
-  width: 80%;
+  width: 328px;
   margin-top: 15px;
   border-radius: 23px;
   overflow: hidden;
