@@ -7,13 +7,37 @@ function Home({ setStep, setPoint }) {
     setStep(1);
     setPoint(0);
   });
+  useEffect(() => {
+    let ins = document.createElement("ins");
+    let scr = document.createElement("script");
+    ins.className = "kakao_ad_area";
+    ins.style = "display:none; width:100%;";
+    scr.async = "true";
+    scr.type = "text/javascript";
+    scr.src = "//t1.daumcdn.net/kas/static/ba.min.js";
+    ins.setAttribute("data-ad-width", "320");
+    ins.setAttribute("data-ad-height", "50");
+    ins.setAttribute("data-ad-unit", "DAN-VmclSG90FTrothMP");
+    document.querySelector(".adfit1").appendChild(ins);
+    document.querySelector(".adfit1").appendChild(scr);
+  });
+
   return (
     <Homemain>
-      <Link to="/problem">
+      <Link
+        style={{
+          display: "flex",
+          "flex-direction": "column",
+          "align-items": "center",
+        }}
+        to="/problem"
+      >
         <Btn>
           <BtnSpan>나와 어울리는</BtnSpan>
           <BtnSpan>댄스 크루 찾으러 가기</BtnSpan>
         </Btn>
+
+        <AddivBtn className="adfit1" />
       </Link>
       <img
         src="https://hitwebcounter.com/counter/counter.php?page=7881174&style=0025&nbdigits=7&type=page&initCount=0"
@@ -48,7 +72,7 @@ const Btn = styled.div`
   width: 240px;
   height: 70px;
   margin-top: 390px;
-  margin-bottom: 16px;
+  margin-bottom: 10px;
   border: 1px solid #a3b0ff;
   box-sizing: border-box;
   border-radius: 35px;
@@ -103,5 +127,10 @@ const Footer = styled.div`
     transform: translate(0%, 0%);
   }
 `;
-
+const AddivBtn = styled.div`
+  width: 240px;
+  margin-bottom: 8px;
+  border-radius: 23px;
+  overflow: hidden;
+`;
 export default Home;

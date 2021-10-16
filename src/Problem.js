@@ -12,21 +12,38 @@ function Problem({ step, firstAnswer, secondAnswer }) {
     endFlag = 1;
   }
   useEffect(() => {
-    let ins = document.createElement("ins");
+    let ins = document.querySelector(".kakao_ad_area");
+    if (ins) {
+      document.querySelector(".adfit1").removeChild(ins);
+    }
+    ins = document.createElement("ins");
     let scr = document.createElement("script");
-
     ins.className = "kakao_ad_area";
     ins.style = "display:none; width:100%;";
     scr.async = "true";
     scr.type = "text/javascript";
     scr.src = "//t1.daumcdn.net/kas/static/ba.min.js";
     ins.setAttribute("data-ad-width", "320");
-    ins.setAttribute("data-ad-height", "100");
-    ins.setAttribute("data-ad-unit", "DAN-ZqR4Npz8VrhNg5g9");
-
-    document.querySelector(".adfit").appendChild(ins);
-    document.querySelector(".adfit").appendChild(scr);
+    ins.setAttribute("data-ad-height", "50");
+    ins.setAttribute("data-ad-unit", "DAN-VmclSG90FTrothMP");
+    document.querySelector(".adfit1").appendChild(ins);
+    document.querySelector(".adfit1").appendChild(scr);
   });
+  useEffect(() => {
+    let ins1 = document.createElement("ins");
+    let scr1 = document.createElement("script");
+    ins1.className = "kakao_ad_area";
+    ins1.style = "display:none; width:100%;";
+    scr1.async = "true";
+    scr1.type = "text/javascript";
+    scr1.src = "//t1.daumcdn.net/kas/static/ba.min.js";
+    ins1.setAttribute("data-ad-width", "320");
+    ins1.setAttribute("data-ad-height", "100");
+    ins1.setAttribute("data-ad-unit", "DAN-ZqR4Npz8VrhNg5g9");
+    document.querySelector(".adfit2").appendChild(ins1);
+    document.querySelector(".adfit2").appendChild(scr1);
+  });
+
   const roundTitleList = [
     "첫 등장",
     "약자 지목 배틀 1",
@@ -106,6 +123,7 @@ function Problem({ step, firstAnswer, secondAnswer }) {
       <Btn onClick={endFlag ? seeResult : secondAnswer}>
         {answerList2[step - 1]}
       </Btn>
+      <AddivBtn className="adfit1" />
       <LogoRoll>
         <Logoimg src="logo_COCANBUTTER.png" alt="" srcset="" />
         <Logoimg src="logo_HOLYBANG.png" alt="" srcset="" />
@@ -118,7 +136,7 @@ function Problem({ step, firstAnswer, secondAnswer }) {
         <Logoimg src="logo_WAYB.png" alt="" srcset="" />
         <Logoimg src="logo_YGX.png" alt="" srcset="" />
       </LogoRoll2>
-      <Addiv className="adfit" />
+      <Addiv className="adfit2" />
     </Problemmain>
   );
 }
@@ -303,7 +321,12 @@ const LogoRoll2 = styled.div`
 const Logoimg = styled.img`
   width: 70px;
 `;
-
+const AddivBtn = styled.div`
+  width: 80%;
+  margin-top: 15px;
+  border-radius: 23px;
+  overflow: hidden;
+`;
 const Addiv = styled.div`
   position: fixed;
   top: 88%;
