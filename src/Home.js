@@ -82,7 +82,7 @@ const Btn = styled.div`
   justify-content: center;
 `;
 
-const BtnSpan = styled.span`
+const BtnSpan = styled.h1`
   font-weight: 700;
   font-size: 20px;
   line-height: 29px;
